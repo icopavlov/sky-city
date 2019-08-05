@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang= "bg">
+<head>
+	<title></title>
+	<meta charset= "UTF-8" />
+	<meta name= "viewport" content= "width=device-width, initial-scale=1" />
+	<meta name= "description" content= "">
+</head>
+
+<body>
+
+<header></header>
+<main>
+	<section id= "slider" class= "section"></section>
+	<section id= "about" class= "section"></section>
+	<section id= "services" class= "section"></section>
+	<section id= "contact-info" class= "section"></section>
+	<section id= "send-email" class= "section"></section>
+</main>
+<footer></footer>
+
+<!-- jQuery -->
+<script src= "js/libraries/jquery-3.2.0.min.js" type= "text/javascript"></script>
+
+<!-- Handlebars -->
+<script src= "js/libraries/handlebars-v4.0.12.js"></script>
+<script src= "js/handlebars-template-loading.js" type= "text/javascript"></script>
+<!-- Content files -->
+<script src= "content/constants.js" type= "text/javascript"></script>
+<script src= "content/header-context.js" type= "text/javascript"></script>
+<script src= "content/slider-context.js" type= "text/javascript"></script>
+<script src= "content/about-context.js" type= "text/javascript"></script>
+<script src= "content/services-context.js" type= "text/javascript"></script>
+<script src= "content/contact-info-context.js" type= "text/javascript"></script>
+<script src= "content/send-email-context.js" type= "text/javascript"></script>
+<script src= "content/footer-context.js" type= "text/javascript"></script>
+
+<!-- Header template -->
+<script id= "header-template" type= "text/x-handlebars-template">
+	<h1 class= "logo"><a href= "#slider">{{title}}</a></h1>
+	
+	<nav id= "main-nav">
+		<h6>{{mainNav.title}}</h6>
+		<ul class= "nav">
+			{{#each mainNav.links}}
+				<li><a href= "#{{target}}">{{label}}</a></li>
+			{{/each}}
+		</ul>
+		<a class= "button open" href= "#">Отворете/затворете навигацията</a>
+	</nav>
+	
+	<a class= "button scroll-to-top" href= "#slider">Отидете горе</a>
+	
+	<section id= "quick-contact">
+		<h6>{{quickContact.title}}</h6>
+		<section class= "quick-contact-items">
+			{{#each quickContact.items}}
+				<dl class= "entry {{classValue}}">
+					<dt class= "label">{{label}}</dt>
+					<dd class= "value">{{value}}</dd>
+				</dl>
+			{{/each}}
+		</section>
+	</section>
+</script>
+
+<!-- Slider template -->
+<script id= "slider-template" type= "text/x-handlebars-template">
+	<h2 class= "section-title">{{title}}</h2>
+	
+	<ol class= "content">
+		{{#each slides}}
+			<li class= "slide {{classValue}}">
+				<h4 class= "sup-title">{{subtitle}}</h4>
+				<h3 class= "title">{{title}}</h3>
+				<p class= "description">{{text}}</p>
+				<a class= "button open" data-target-selector= "{{targetSelector}}" href= "#">{{../buttonText}}</a>
+				<figure class= "cover-image" style= "background-image: url( ./images/slider/{{image.source}} )">
+					<img src= "images/slider/{{image.source}}" alt= "" />
+				</figure>
+			</li>
+		{{/each}}
+	</ol>
+	
+	<section class= "controls">
+		<ol class= "random-access">
+			{{#each slides}}
+				<li><button></button></li>
+			{{/each}}
+		</ol>
+	</section>
+</script>
+
+<!-- About template -->
+<script id= "about-template" type= "text/x-handlebars-template">
+	<h2 class= "section-title">{{title}}</h2>
+	
+	<section class= "body">
+		<section class= "header">
+			<h3 class= "title">{{title}}</h3>
+			{{#each header.paragraphs}}
+				<p class= "description">{{this}}</p>
+			{{/each}}
+			<a class= "button open" href= "#">{{buttonOpenText}}</a>
+			<figure class= "cover-image" style= "background-image: url( ./images/about/{{header.image.source}} )">
+				<img src= "images/about/{{header.image.source}}" alt= "" />
+			</figure>
+		</section>
+		
+		<section class= "main">
+			<a class= "button close" href= "#">{{buttonCloseText}}</a>
+			
+			<article class= "content">
+				<h3 class= "title">{{title}}</h3>
+				<p class= "description">{{header.text}}<p>
+				
+				{{#each main.articles}}
+					<h4 class= "sub-title">{{title}}</h4>
+					{{#each paragraphs}}
+						{{#if text}}
+							<p>{{text}}</p>
+						{{/if}}
+						{{#if list}}
+							<ul>
+								{{#each list}}
+									<li>{{this}}</li>
+								{{/each}}
+							</ul>
+						{{/if}}
+					{{/each}}
+				{{/each}}
+			</article>
+		</section>
+	</section>
+</script>
+
+<!-- Services template -->
+<script id= "services-template" type= "text/x-handlebars-template">
+	<h2 class= "section-title">{{title}}</h2>
+	
+	<ul class= "service-groups-array body">
+		{{#each serviceGroups}}
+			<li class= "service-group {{className}}">
+				<section class= "header">
+					<h3 class= "title">{{../title}}</h3>
+					{{#each header.paragraphs}}
+						<p class= "description">{{this}}</p>
+					{{/each}}
+					<a class= "button open" href= "#">{{../openButton.text}}</a>
+					<figure class= "cover-image" style= "background-image: url( ./images/services/{{header.image.source}} )">
+						<img src= "images/services/{{header.image.source}}" alt= "" />
+					</figure>
+				</section>
+				
+				<section class= "main">
+					<a class= "button close" href= "#">{{../closeButton.text}}</a>
+					
+					<article class= "content">
+						<h3 class= "title">{{../title}}</h3>
+						{{#each main.paragraphs}}
+							<p class= "description">{{this}}</p>
+						{{/each}}
+						
+						<ol class= "services-array">
+							{{#each main.services}}
+								<li class= "service">
+									<h4 class= "service-title">{{title}}</h4>
+									<article class= "service-info">
+										<h5 class= "service-title">{{title}}</h5>
+										{{#each paragraphs}}
+											<p>{{this}}</p>
+										{{/each}}
+										<a class= "button close" href= "#">{{../closeButton.text}}</a>
+									</article>
+									<a href= "#" class= "button open">{{../../openButton.text}}</a>
+								</li>
+							{{/each}}
+						</ol>
+					</article>
+				</section>
+			</li>
+		{{/each}}
+	</ul>
+</script>
+
+<!-- Contact info template -->
+<script id= "contact-info-template" type= "text/x-handlebars-template">
+	<h2 class= "section-title">{{title}}</h2>
+	
+	<section class= "controls">
+		<ol class= "random-access">
+			{{#each contactInfoItems}}
+				<li><button></button></li>
+			{{/each}}
+		</ol>
+	</section>
+	
+	<ol class= "contact-info-items content">
+		{{#each contactInfoItems}}
+			<li class= "slide {{classValue}}">
+				<h3 class= "title">{{title}}</h3>
+				{{#each text}}
+					<p class= "description">{{this}}</p>
+				{{/each}}
+				
+				<section class= "info">
+					{{#each values}}
+						<dl class= "values">
+							{{#if label}}
+								<dt class= "label">{{label}}</dt>
+							{{/if}}
+							<dd class= "value">{{value}}</dd>
+						</dl>
+					{{/each}}
+				</section>
+			</li>
+		{{/each}}
+	</ol>
+	
+	<figure class= "cover-image" style= "background-image: url( ./images/contact-info/{{image.source}} )">
+		<img src= "images/contact-info/{{image.source}}" alt= "" />
+	</figure>
+</script>
+
+<!-- Send email template -->
+<script id= "send-email-template" type= "text/x-handlebars-template">
+	<h2 class= "section-title">{{title}}</h2>
+	
+	<section class= "body">
+		<form action= "" method= "post">
+			{{#each fields}}
+				<dl class= "{{classValue}}">
+					<dt><label>{{label}}</label></dt>
+					<dd>
+						{{#if isTextarea}}
+							<textarea name= "{{classValue}}"></textarea>
+						{{else}}
+							{{#if isSubmit}}
+								<input type= "submit" value= "{{label}}" disabled= "disabled" />
+							{{else}}
+								<input type= "text" name= "{{classValue}}" />
+							{{/if}}
+						{{/if}}
+					</dd>
+				</dl>
+			{{/each}}
+		</form>
+	</section>
+</script>
+
+<!-- Footer template -->
+<script id= "footer-template" type= "text/x-handlebars-template">
+	<h2 class= "logo"><a href= "#slider">{{title}}</a></h2>
+	
+	<p class= "copyright-data">{{{copyright}}}</p>
+	
+	<section id= "social-net-links">
+		<h6>{{socialNets.title}}</h6>
+		<ul class= "nav">
+			{{#each socialNets.links}}
+				<li class= "{{classValue}}"><a class= "button link" href= "{{url}}">{{label}}</a></li>
+			{{/each}}
+		</ul>
+	</section>
+</script>
+
+<!-- Website stylesheets, uncommonly placed at the bottom to speed up page rendering -->
+<link href= "plugins/slick-1.6.0/slick/slick.css" rel= "stylesheet" />	
+<link href= "css/style/style.css" type= "text/css" rel= "stylesheet" />
+
+<!-- slickSlider, providing slider functionality for the slider, about, services and contact info sections -->
+<script src= "plugins/slick-1.6.0/slick/slick.min.js" type= "text/javascript"></script>
+<!-- UIkit, providing smooth scrolling functionallity -->
+<script src= "plugins/uikit-3.0.0-rc.10/js/uikit.min.js" type= "text/javascript"></script>
+<!-- Project scripts -->
+<script src= "js/constants.js" type= "text/javascript"></script>
+<script src= "js/functions.js" type= "text/javascript"></script>
+<script src= "js/project.js" type= "text/javascript"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

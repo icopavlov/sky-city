@@ -1,0 +1,3662 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body, a {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*My additional reset styles*/
+a {
+	color: inherit;
+	text-decoration: none;
+}/**
+ * Removes all helper headings
+ */
+header h6, 
+/* #slider h2, 
+#services h2,
+#contact-info h2,
+#send-email h2,  */
+.section-title,
+#social-net-links h6 {
+	display: none;
+}
+
+/**
+ * Sets the vertical distance between sections
+ */
+/* #slider, 
+#about, 
+#services, 
+#send-email {
+	margin-bottom: 2.5rem;
+} */
+
+/**
+ * Gives all non-edge-to-edge sections width (960px) and centers them
+ */
+header .logo, #main-nav, #quick-contact, 
+#slider .controls, 
+#about, 
+#services,
+/* #contact-info .title, #contact-info .description, */ /* #contact-info .info, */ #contact-info .contact-info-items,
+#send-email, 
+#social-net-links .nav {
+	max-width: 960px; margin-left: auto; margin-right: auto;
+}
+
+/**
+ * Centers all non-edge-to-edge sections
+ */
+/* #logo, #main-nav, #quick-contact, 
+#slider .controls,
+#services .service-groups-array, 
+#contact-info h3, #contact-info p, #contact-info .info, #contact-info .contact-info-items,
+#send-email, 
+footer, #social-net-links .nav {
+	margin-left: auto; margin-right: auto;
+} */
+
+/**
+ * Gives section's heading, paragraph and button vertical distance
+ */
+/* #slider h3, #slider h4, #slider p,
+.header h2, .header p,
+.header h3, .main h3, .main p,
+#contact-info h3, #contact-info p {
+	margin-bottom: 2rem;
+} */
+
+.title, 
+.description {
+	margin-bottom: 2rem;
+}
+
+/* .main .description {
+	margin-bottom: 1rem;
+} */
+
+/* #slider .button.open {
+	margin-top: 2rem;
+} */
+
+/**
+ * Clears floats
+ */
+#main-nav:after, 
+#main-nav ul:after, 
+#quick-contact .quick-contact-items:after, 
+#services .content dl:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/* #about, #services {
+	max-width: 960px;
+	margin-left: auto; margin-right: auto;
+} */
+
+
+/**
+ * Sets the vertical distance between sections
+ */
+/* #slider, 
+#about, 
+#services {
+	margin-bottom: 8px;
+} */
+
+/* .section {
+	margin-bottom: 2.5rem;
+} */
+
+.section {
+	margin-bottom: 8px;
+}
+
+#send-email {
+	margin-bottom: 2.5rem;
+}
+
+#contact-info {
+	margin-bottom: -5rem;
+}
+
+body > header {
+	width: 100%;
+	margin-top: 4rem;
+	position: absolute; z-index: 4;
+}
+
+/** 
+ * Given that the header and the main navigation are positioned over the slider, 
+ * it's necessary to push slider content down, to free up space for the nav.
+ * For that purpose, top padding is applied to slider content.
+ * Top padding of slider content is equal to {header's top margin} + {header's height} + {slider content's bottom padding}
+ */
+#slider .slide {
+	padding-top: calc( 4rem + 3.2rem + 7rem ); padding-bottom: 7rem;
+}
+
+.button.close {
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Font declarations
+ */
+ 
+@font-face {
+	font-family: "Font Awesome";
+	src: url( "../../fonts/FontAwesome.otf" );
+}
+
+@font-face {
+	font-family: "Font Awesome Brands";
+	src: url( "../../fonts/fa-brands-400.ttf" );
+	
+}
+
+@font-face {
+	font-family: "Arial Black";
+	src: url( "../../fonts/ariblk.ttf" );
+	
+}
+
+/**
+ * Sets base font family("Arial"), size(16px) and line-height(1.6)
+ */
+body {
+	font-size: 16px;
+	font-family: Arial;
+	line-height: 1.6;
+	color: rgba( 80, 80, 0, 1 );
+}
+
+.title, .sup-title, .sub-title {
+	font-family: "Arial Black";
+}
+
+.title {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+/* #slider h3,
+.header h2, .header h3, .main h3, .main h4,
+#contact-info h3 {
+	font-family: "Arial Black";
+	font-size: 1.8rem;
+	line-height: 1.2;
+} */
+
+
+
+
+/* .header h2, .header h3, .main h3 {
+	font-family: "Arial Black";
+	font-size: 1.5rem;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	color: rgba( 80, 80, 0, 1 );
+}
+
+/**
+ * Open and close buttons :after-s have different colors
+ */
+
+.button:after, 
+#slider .random-access button:before, #slider .random-access button:after {
+	background-color: rgba( 80, 80, 0, 1 );
+}
+
+/* .cover-image,
+#send-email form:after,
+.copyright-data {
+	background-color: red !important;
+}
+
+.cover-image {
+	background-image: none !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** 
+ * Since cover image is essentially a background and 
+ * is absolutely positioned within its holder section,
+ * the section is positioned
+ */
+#slider li.slick-slide,
+.header, 
+#services,
+#contact-info {
+	position: relative;
+}
+
+/** 
+ * Defining images color overlay
+ */
+
+.cover-image, .cover-image:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+}
+
+.cover-image {
+	z-index: -1;
+	background: center center / cover no-repeat;
+}
+
+.cover-image img {
+	display: none;
+}
+
+.cover-image:before {
+	background-color: rgba( 255, 255, 0, 0.4 );
+	content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:active, :focus, :empty {
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#quick-contact .header:after, 
+#slider .button.open, 
+#about .button.open, 
+#services .header .button.open, 
+#social-net-links .nav a, 
+#contact-info .random-access button:after,
+.button.close, 
+.button.scroll-to-top  {
+	box-shadow: 0 0 2px rgba( 0, 0, 0, 0.25 );
+}
+
+#logo, #quick-contact, #main-nav .button.open,
+#slider .content, 
+#about .header,
+#services .header, 
+#contact-info, #contact-info .random-access button {
+	text-shadow: 0 0 1px rgba( 255, 255, 255, 1 );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide-up {
+	
+	0 % {
+		transform: translateY( 100px );
+	}
+	
+	100% {
+		transform: translateY( 0 );
+	}
+	
+}
+
+@keyframes fade-in {
+	
+	0 % {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+	
+}
+
+@keyframes fat-axis-rotate {
+	
+	0 % {
+		transform: rotateY( -10deg ) scale( 1.2 ) translateX( -100px );
+	}
+	
+	100% {
+		transform: rotateY( 0 ) scale( 1 ) translateX( 0 );
+	}
+}
+
+@keyframes slide-away {
+	
+	0 % {
+		transform: scale( 1.8 );
+	}
+	
+	100% {
+		transform: scale( 1 );
+	}
+	
+}
+
+@keyframes pop {
+	
+	0% {
+		transform: scale( 1 );
+	}
+	
+	50% {
+		transform: scale( 1.2 );
+	}
+	
+	100% {
+		transform: scale( 1 );
+	}
+	
+}
+
+@keyframes slide-away-pop {
+	
+	0 % {
+		transform: scale( 1.8 );
+		opacity: 0;
+	}
+	
+	50% {
+		transform: scale( 1 );
+		opacity: 1;
+	}
+	
+	75% {
+		transform: scale( 1.2 );
+	}
+	
+	100% {
+		transform: scale( 1 );
+		opacity: 1;
+	}
+	
+}
+
+@keyframes fade-in-pop {
+	
+	0 % {
+		opacity: 0;
+	}
+	
+	20% {
+		transform: scale( 1 );
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	60% {
+		transform: scale( 1.2 );
+	}
+	
+	100% {
+		transform: scale( 1 );
+		opacity: 1;
+	}
+	
+}
+
+/* @keyframes slide-away-straighten {
+	
+	0 % {
+		transform: rotateY( 10deg );
+		opacity: 0;
+	}
+	
+	100% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+} */
+
+@keyframes rotate-left {
+	
+	0 % {
+		transform: rotateY( -5deg );
+		opacity: 0;
+	}
+	
+	5% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	95% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	100% {
+		transform: rotateY( -5deg );
+		opacity: 0;
+	}
+	
+}
+
+@keyframes rotate-right {
+	
+	0 % {
+		transform: rotateY( 2deg );
+		opacity: 0;
+	}
+	
+	5% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	95% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	100% {
+		transform: rotateY( 2deg );
+		opacity: 0;
+	}
+	
+}
+
+@keyframes rotate-left-full {
+	
+	0 % {
+		transform: rotateY( -5deg );
+		opacity: 0;
+	}
+	
+	5% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	95% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	100% {
+		transform: rotateY( 5deg );
+		opacity: 0;
+	}
+	
+}
+
+@keyframes rotate-right-full {
+	
+	0 % {
+		transform: rotateY( 5deg );
+		opacity: 0;
+	}
+	
+	5% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	95% {
+		transform: rotateY( 0deg );
+		opacity: 1;
+	}
+	
+	100% {
+		transform: rotateY( -5deg );
+		opacity: 0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Single article section header
+ */
+
+.header {
+	padding-top: 4rem; padding-bottom: 4rem;
+}
+
+/* .section-title {
+	display: none;
+	
+} */
+
+.header .title, .header .description, .header .button.open {
+	margin-left: 4rem; margin-right: 25%;
+}
+
+/**
+ * Single article section main
+ */
+
+.main {
+	padding-top: 2rem; padding-bottom: 2.5rem;
+	position: relative;
+}
+
+/* .main > * {
+	margin-left: 0; margin-right: 0;
+} */
+
+/* .main .button.close, .main .title {
+	margin-bottom: 1.25rem;
+} */
+
+.button.close, 
+.main .title {
+	margin-bottom: 1.25rem;
+}
+
+.main .description {
+	margin-bottom: 0.5rem;
+}
+
+.main > .button.close {
+	position: relative;
+}
+
+.content .sub-title {
+	margin-top: 0.75rem;
+	margin-bottom: 0.4rem;
+}
+
+/* .content p {
+	margin-top: 0.4rem;
+	margin-bottom: 0;
+} */
+
+.main .content > p {
+//	margin-bottom: 4rem;
+	
+}
+
+/* .main .title, .main > p {
+	margin-right: 20%;
+} */
+
+/* .main > p {
+	margin-bottom: 0.25rem;
+} */
+
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.main {
+	line-height: 1.4;
+}
+
+/* .title, .sup-title, .sub-title {
+	font-family: "Arial Black";
+}
+
+.title {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+.content > .sup-title {
+	
+}
+
+#slider .content-title {
+//	font-size: 2.0rem;
+} */
+
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+/* @media screen and ( max-width: 960px ) {
+	
+	.header .title, .header .description, .header .button.open {
+		margin-left: 1.25rem; margin-right: 10%;
+	}
+	
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+.slide {
+//	position: relative;
+	/* padding-top: 3.5rem; padding-bottom: 7.5rem; */
+}
+
+.sup-title {
+//	margin-bottom: 0.7rem;
+}
+
+/** 
+ * Slides go from the left browser edge to the right one, but their content has distance from those edges,
+ * left and right margins are applied to each slide content
+ */
+
+/* .sup-title, .title, .description, .button.open {
+	margin-left: calc( ( 100% - 960px ) / 2 ); margin-right: calc( ( 100% - 960px ) / 2 );
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+body > header {
+	border-style: solid;
+	border-width: 1px 0;
+}
+
+header .logo, #quick-contact {
+	box-sizing: border-box;
+}
+
+/** 
+ * Logo, main nav and quick contact are given equal heights (50px)
+ * and main nav is pulled up over the logo to align them vertically.
+ * 
+ * The whole header is pushed down (70px) to make room for quick contact,
+ * which is positioned right on top of the header
+ */
+
+header .logo, header .logo a, #main-nav .nav a,
+#quick-contact .header, #quick-contact .main {
+	height: 3.2rem; line-height: 3.2rem;
+}
+
+header .logo a {
+	display: block;
+	position: absolute;
+}
+
+.logo + h2 {
+	display: none;
+}
+
+.button.scroll-to-top {
+	position: fixed; right: 10px; top: 50%; margin-top: -20px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+header .logo a {
+	text-indent: 0;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+body > header {
+	background-color: rgba( 255, 255, 0, 0.1 );
+	border-color: rgba( 255, 255, 255, 0.25 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+.button.scroll-to-top {
+	transform: translateX( calc( 40px + 2px + 10px ) );
+	opacity: 0;
+}
+
+.button.scroll-to-top {
+	transition-property: transform, opacity;
+	transition-duration: 0.2s;
+}
+
+.button.scroll-to-top.reveal {
+	transform: translateX( 0 );
+	opacity: 1;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#main-nav {
+	position: relative; z-index: 1;
+}
+
+#main-nav .nav {
+	display: flex; flex-direction: column; justify-content: center;
+	width: 100%; height: 0;
+	position: fixed; left: 0; top: 0; z-index: 1;
+	overflow: hidden;
+}
+
+#main-nav .nav a {
+	display: block;
+	max-width: 960px; margin-left: auto; margin-right: auto;
+	height: 2.5em;
+	position: relative;
+}
+
+#main-nav .button.open {
+	padding: 0;
+	position: absolute; left: 0; top: 12px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#main-nav .nav a:after {
+	content: "";
+}
+
+#main-nav .nav li {
+	text-align: center;
+}
+
+#main-nav .nav a {
+	font-size: 120%;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#main-nav .nav {
+	background-color: rgba( 255, 255, 255, 0.95 );
+}
+
+#main-nav .nav a {
+	color: rgba( 80, 80, 0, 0.75 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+#main-nav .nav {
+	transition: height 0.2s;
+}
+
+#main-nav.open .nav {
+	height: 100vh;
+}
+
+#main-nav .nav li {
+	transform: translateY( 50px );
+	opacity: 0;
+	transition: none;
+}
+
+#main-nav.open .nav li {
+	transform: translateY( 0 );
+	opacity: 1;
+	transition-property: transform, opacity; transition-duration: 0.15s;
+}
+
+#main-nav .button.open {
+	transition: transform 0.4s;
+}
+
+#main-nav.open .button.open {
+	transform: rotateZ( 90deg );
+}
+
+#main-nav.open .button.open:before {
+	animation: icon-pop 0.4s forwards;
+}
+
+#main-nav .nav li:nth-child( 1 ) {
+	transition-delay: 0.4s;
+}
+
+#main-nav .nav li:nth-child( 2 ) {
+	transition-delay: 0.55s;
+}
+
+#main-nav .nav li:nth-child( 3 ) {
+	transition-delay: 0.7s;
+}
+
+#main-nav .nav li:nth-child( 4 ) {
+	transition-delay: 0.85s;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+@keyframes button-pop {
+	
+	0% {
+		transform: rotateZ( 0deg );
+	}
+	
+	100% {
+		transform: rotateZ( 90deg );
+	}
+	
+}
+
+@keyframes icon-pop {
+	
+	0% {
+		opacity: 1;
+	}
+	
+	100% {
+		content: "\f00d";
+		opacity: 1;
+	}
+	
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+#main-nav .nav a {
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.85 );
+}
+
+#main-nav .nav a:after {
+	display: block;
+	position: absolute; z-index: -1;
+	bottom: 0; left: 0; right: 0;
+	border-bottom: 1px solid;
+	opacity: 0.45;
+}
+
+#main-nav li:last-child a:after {
+	width: 0;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #main-nav .button.open, */ #main-nav .nav a:after {
+		left: 1.25rem;
+	}
+	
+	#main-nav .nav a:after {
+		right: 1.25rem;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#quick-contact {
+	position: relative;
+}
+
+/* Quick contact is positioned on top of the header */
+#quick-contact .quick-contact-items {
+	position: absolute;
+	right: 20px; top: 12px;
+}
+
+/* Aligning quick contact icons and content horizontally */
+#quick-contact .entry, #quick-contact .label, #quick-contact .value {
+	float: left;
+	height: 42px; line-height: 42px;
+}
+
+#quick-contact .label {
+	width: 1.8em;
+	position: relative;
+	margin-right: 4px;
+}
+
+/* Quick contact icon boxes */
+#quick-contact .entry .label:before {
+	display: inline-block;
+	width: 1em; height: 1em; line-height: 1em;
+	padding: 0.4em;
+	position: absolute; left: 0; top: 50%; transform: translateY( -50% );
+	box-shadow: unset;
+}
+
+#quick-contact .value {
+	margin-right: 8px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#quick-contact .label {
+	text-indent: -10000px;
+}
+
+#quick-contact .label:before {
+	font-family: "Font Awesome"; font-size: 0.9rem;
+	text-indent: 0; text-align: center;
+}
+
+#quick-contact .phone .label:before {
+	content: "\f095";
+	font-size: 100%;
+}
+
+#quick-contact .email .label:before {
+	content: "\f0e0";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+/** 
+ * Width breakpoints: 780px | 620px
+ */
+
+@media screen and ( max-width: 780px ) {
+	
+	#quick-contact .quick-contact-items {
+		bottom: calc( 100% + 10px );
+	}
+	
+}
+
+@media screen and ( max-width: 520px ) {
+	
+	#quick-contact .entry.email {
+		display: none;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/* #slider {
+	position: relative;
+	border-bottom-style: solid;
+} */
+
+
+/** 
+ * Given that the main navigation is positioned over the slider, it's necessary to push slider content down, 
+ * to free up space for the nav. For that purpose, top padding is applied to slider content.
+ * Top padding of slider content is equal to {header's top margin} + {header's height} + {slider content's bottom padding}
+ */
+/* #slider .slide {
+//	position: relative;
+	padding-top: calc( 70px + 50px + 110px ); padding-bottom: 110px;
+//	overflow: hidden;
+} */
+
+#slider .sup-title {
+	margin-bottom: 0.7rem;
+}
+
+/** 
+ * Slides go from the left browser edge to the right one, but their content has distance from those edges,
+ * left and right margins are applied to each slide content
+ */
+
+#slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+	margin-left: calc( ( 100% - 960px ) / 2 ); margin-right: calc( ( 100% - 960px ) / 2 );
+}
+
+#slider .sup-title, #slider .title, #slider .description {
+	padding-right: calc( 25 / 100 * 960px );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#slider .title {
+	font-size: 1.8rem;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+
+/*
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+		margin-right: 20%;
+	} */
+	
+	#slider .sup-title, #slider .title, #slider .description {
+		padding-right: 0;
+	}
+	
+}
+
+@media screen and ( max-width: 480px ) {
+	
+	#slider .slide {
+		padding-top: calc( 20px + 50px + 5em ); padding-bottom: 2.5em;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** 
+ * Alternative transitions
+ */
+
+#slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+	transform: rotateY( -10deg ) scale( 1.4 ) translateX( -60px ); transform-origin: 0 50%;
+	opacity: 0;
+}
+
+#slider .slide {
+	perspective: 180px;
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title, #slider .slide.current .description, #slider .slide.current .button.open {
+	animation-name: fat-axis-rotate, fade-in; animation-duration: 0.25s; animation-timing-function: ease-out; animation-fill-mode: forwards;
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title {
+	animation-delay: 0s;
+}
+
+#slider .slide.current .description {
+	animation-delay: 0.25s;
+}
+
+#slider .slide.current .button.open {
+	animation-delay: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#slider .controls {
+	display: flex; justify-content: center;
+	margin-top: 5px;
+}
+
+/**
+ * Slider random-access navigation
+ */
+#slider .random-access button {
+	width: 1rem; height: 1rem;
+//	border: 0.075rem solid transparent;
+}
+
+#slider .random-access button:after {
+	box-sizing: border-box;
+	padding: 5%;
+	background-clip: content-box;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/* Represents the button */
+#slider .random-access button:before {
+	transform: scale( 0.35 );
+}
+
+#slider .random-access button:before, #slider .random-access:hover .slick-active button:before, #slider .random-access:hover .current button:before {
+	opacity: 1;
+}
+
+#slider .random-access .slick-active button:before, #slider .random-access .current button:before, #slider .random-access:hover li:hover button:before, #slider .random-access li.slick-active:hover button:before {
+	opacity: 0;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/* #about, #about header, #about header h2, #about header p, #about header a, #about main, #about article p {
+	position: relative;
+} */
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+/* #about {
+	color: rgba( 0, 0, 0, 0.75 );
+	background-color: red;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 640px ) {
+	
+	#about .main article, #about .main > .button.close {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#about .main > .button.close {
+		left: 0;
+	}
+	
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#about {
+	max-width: none;
+}
+
+/* #about, #about .header, #about .title, #about .description, #about .button.open, #about .main, #about article p {
+	position: relative;
+} */
+
+#about .header, #about .main {
+	padding: 4rem 0;
+}
+
+#about .header .title, #about .header .description, #about .header .button.open {
+	margin-left: calc( 50% + 2.5rem ); margin-right: 1.25rem;
+	z-index: 3;
+}
+
+#about article p {
+	margin-top: 1.2rem;
+}
+
+/**
+ * Laying out about- and services-close buttons
+ */
+
+/*
+#about article {
+	max-width: 40rem;
+	margin-left: auto; margin-right: auto;
+}
+*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#about .header:before {
+	content: "";
+}
+
+#about article {
+	text-align: justify;
+}
+
+#about figcaption {
+	text-align: left;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+/* #about {
+	color: rgba( 0, 0, 0, 0.75 );
+} */
+
+/* #about .header:before {
+	background-color: rgba( 255, 255, 0, 0.25 );
+}
+
+#about .main .button.close {
+	color: inherit;
+}
+
+#about .main .button.close:hover {
+	color: rgba( 255, 255, 255, 1 );
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+#about .header figure {
+	display: block;
+	height: 100%;
+	position: absolute; left: 0; top: 0;
+}
+
+#about .header figure {
+	width: 50%;
+}
+
+#about .header figure {
+	z-index: -1;
+	background: center / cover no-repeat;
+}
+
+#about .header:before {
+	z-index: 2;
+}
+
+#about figure {
+	position: relative;
+}
+
+/* #about article img {
+	box-sizing: border-box;
+	display: block;
+	padding: 10px;
+	width: 100%; height: auto;
+	margin-top: 1em;
+}
+
+#about figcaption {
+	margin-top: 4px;
+	padding: 16px; padding-top: 0;
+	position: relative;
+	font-family: "Arial Black"; font-size: 0.85rem; line-height: 1.4; color: rgba( 0, 0, 0, 0.7 ); 
+} */
+
+/*
+#about figure:after {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 1;
+	background-color: rgba( 255, 255, 0, 0.25 );
+	content: "";
+}
+*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	#about .header .title, #about .header .description, #about .header .button.open {
+		margin-left: 1.25rem;
+	}
+	
+	#about .header figure {
+		width: 100%;
+	}
+
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #about header figure {
+		width: 100%;
+	} */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#about .main {
+	padding-bottom: 2.5rem;
+}
+
+#about article {
+	max-width: 600px;
+	margin-left: auto; margin-right: auto;
+}
+
+#about article .sub-title {
+	margin-top: 0.75rem;
+	margin-bottom: 0.4rem;
+}
+
+#about article p {
+	margin-top: 0.4rem;
+}
+
+#about article ul {
+	list-style: inside;
+}
+
+#about .button.close {
+	left: 50%; margin-left: calc( -1 * 600px / 2 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#about .main .sub-title {
+	font-family: "Arial Black";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/* #services header {
+	overflow: hidden;
+}
+
+#services header figure:before {
+	z-index: 2;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#services .main {
+	padding-bottom: 3.25rem;
+}
+
+.services-array {
+	margin-top: 1.25rem;
+	
+}
+
+
+/* Service
+/*----------------------------------------------------------------*/
+
+/* #services .services-array {
+	margin-top: 1rem;
+} */
+
+#services .content > p {
+	
+}
+
+.service {
+	box-sizing: border-box;
+	float: left;
+	width: calc( ( 100% - 1 * 8px ) / 2 ); margin-right: 8px; margin-top: 8px;
+	padding: 2.5rem 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.service:nth-of-type( 2n + 2 ) {
+	margin-right: 0;
+}
+
+/* Service content
+/*----------------------------------------------------------------*/
+
+/* .service-group .main h4, .service-group .main h4:before, .service-group .main p {
+	margin-bottom: 0.5rem;
+} */
+
+.service-title, .service-title:before {
+	margin-bottom: 0.75rem;
+}
+
+.service-title {
+	margin-left: 1rem; margin-right: 1rem;
+	position: relative; z-index: 2;
+}
+
+.service-title:before {
+	display: block;
+	width: 40px; height: 40px; line-height: 40px;
+	margin-left: auto; margin-right: auto;
+	border: 1px solid; border-radius: 20px;
+}
+
+/* Service info
+/*----------------------------------------------------------------*/
+
+.service-info {
+	box-sizing: border-box;
+	width: 80%;
+	padding: 40px;
+	position: absolute; left: 10%; top: 55%; z-index: 3;
+//	box-shadow: 0 0 25px rgba( 0, 0, 0, 0.75 );
+}
+
+.service-info .service-title {
+	display: none;
+}
+
+.service-info p {
+	margin-top: 0.4rem; margin-bottom: 0;
+}
+
+.service-info .button.close {
+	margin: 0;
+	position: absolute; 
+	left: 100%; margin-left: -20px; bottom: 100%; margin-bottom: -20px;
+}
+	
+
+/* #services .main li .button.open {
+	height: 40px; line-height: 40px;
+} */
+
+.service:after {
+	box-sizing: border-box;
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 1;
+}
+
+
+/* #services .main:after {
+	display: block;
+	clear: both;
+	content: "";
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.service, .service-title {
+	text-align: center;
+}
+
+.service-title, .service-info .service-title, .service p {
+	font-size: 0.85rem; line-height: 1.4;
+}
+
+.service-title, .service-info .service-title /* , #services main .main dd */ {
+	font-family: "Arial Black";
+}
+
+.service-title:before {
+	font-size: 1.2rem;
+	font-family: "Font Awesome";
+	content: "\f00c";
+}
+
+.service article {
+	text-align: left;
+}
+
+.service:after {
+	content: "";
+}
+
+/* #services .main dl {
+	line-height: 1;
+}
+
+#services main .main dd {
+	font-size: 1.5rem;
+}
+
+#services .main dd:nth-of-type( 1 ) {
+	font-size: 4rem;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#services main {
+	background-color: rgba( 80, 80, 0, 1 );
+}
+
+#services .main, #services .controls {
+	border-color: transparent;
+}
+
+.service article {
+	background-color: rgba( 80, 80, 0, 1 );
+	color: rgba( 255, 255, 255, 1 );
+}
+
+.service:after {
+	background-color: rgba( 255, 255, 0, 0.45 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+/* #services li.service-group:nth-child( n ) header {
+	background: center center / cover no-repeat;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+.service.current {
+	overflow: visible;
+}
+
+
+/* Article appears when open button is clicked
+/*----------------------------------------------------------------*/
+
+.service article {
+	visibility: hidden;
+	transform: translateY( 40px );
+	opacity: 0;
+}
+
+.service.current article {
+	visibility: visible;
+	animation-name: fade-in, translate-up; animation-duration: 0.25s; animation-delay: 0.2s; animation-fill-mode: forwards;
+}
+	
+
+/* Button close
+/*----------------------------------------------------------------*/
+
+.service-info .button.close {
+	background-color: rgba( 80, 80, 0, 1 );
+	border-color: rgba( 255, 255, 255, 1 );
+}
+
+.service-info .button.close:after {
+	background-color: rgba( 255, 255, 255, 1 );
+}
+
+.service-info .button.close:hover {
+	color: rgba( 80, 80, 0, 1 );
+}
+
+	
+/* Service holder is brought over the rest when hovered or current
+/*----------------------------------------------------------------*/
+
+.service {
+	z-index: 1;
+}
+
+.service:hover, .service.current {
+	z-index: 2;
+}
+
+.service.current {
+	z-index: 3;
+	overflow: visible;
+}
+	
+
+/* Button open
+/*----------------------------------------------------------------*/
+
+.service .button.open {
+	border-color: rgba( 80, 80, 0, 0.9 );
+	color: rgba( 80, 80, 0, 1 );
+}
+
+.service .button.open:hover, .service.current .button.open {
+	color: rgba( 255, 255, 255, 1 );
+	text-shadow: unset;
+}
+
+.service .button.open:hover:after, .service.current .button.open:after {
+	visibility: visible;
+	transform: scale( 1 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+@keyframes fade-in {
+	
+	0% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+	
+}
+
+@keyframes translate-up {
+	
+	0% {
+		transform: translateY( 40px );
+	}
+	
+	100% {
+		transform: translateY( 0 );
+	}
+	
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+#services .service-title,
+#services .service .button.open {
+	opacity: 0.75;
+}
+
+#services .service-info {
+	box-shadow: 0 0 25px rgba( 0, 0, 0, 0.75 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 920px ) {
+	
+	/* #services .main {
+		margin-left: -1.25rem; margin-right: -1.25rem;
+	} */
+	
+}
+
+@media screen and ( max-width: 840px ) {
+	
+	.service:nth-child( n ) {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#contact-info {
+	padding-top: 3.5rem; padding-bottom: 7.5rem;
+/* 	position: relative; z-index: 1;
+	overflow: hidden; */
+}
+
+/* Gives the contact info controls and the list with the info the same padding */
+/* #contact-info .title, #contact-info .description, #contact-info .info, */ #contact-info .contact-info-items, #contact-info .controls {
+	box-sizing: border-box;
+	padding-right: calc( 40 / 100 * 960px );
+}
+
+/* .contact-info-items .sup-title, .contact-info-items .title, .contact-info-items .description, .contact-info-items .button.open {
+	margin-left: auto; margin-right: auto;
+} */
+
+/* #contact-info .contact-info-items {
+	z-index: 2;
+} */
+
+/* .contact-info-items .slide {
+	padding-top: 3.5rem; padding-bottom: 7.5rem;
+} */
+
+.contact-info-items .values {
+	float: left;
+	padding: 0.75em; padding-top: 0.25em;
+	border: 1px solid rgba( 80, 80, 0, 0.4 );
+}
+
+.contact-info-items .values:not( :last-of-type ) {
+	margin-right: 0.5em; margin-bottom: 0.5em;
+}
+
+.contact-info-items .info:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/* #contact-info .title, #contact-info .description  {
+	margin-left: 0;
+} */
+
+#contact-info .controls {
+//	box-sizing: border-box;
+	height: 100%;
+	position: absolute; z-index: 3; 
+	top: 0; right: calc( ( 100% - 960px ) / 2 );
+}
+
+#contact-info .random-access {
+	position: absolute; 
+	left: 50%; top: 50%; transform: translate( -50%, -50% );
+}
+
+/* #contact-info figure {
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+} */
+
+/* #contact-info:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; top: 0; left: 0; z-index: 1;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+@font-face {
+	font-family: "Font Awesome";
+	src: url( "../fonts/FontAwesome.otf" );
+}
+
+/* #contact-info:before {
+	content: "";
+} */
+
+.contact-info-items .info {
+	line-height: 1;
+}
+
+.contact-info-items .label {
+	font-size: 0.8rem;
+	line-height: 1.2;
+	text-transform: lowercase;
+}
+
+/* .contact-info-items .label {
+	line-height: 1.2;
+	text-transform: lowercase;
+} */
+
+.contact-info-items .value {
+	font-family: "Arial Black";
+	font-size: 1.4rem;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#contact-info {
+//	color: rgba( 255, 255, 255, 1 );
+}
+
+#contact-info .contact-info-items, #contact-info .controls {
+//	border-color: transparent;
+}
+
+/* .contact-info-items .label {
+	color: rgba( 255, 255, 255, 1 );
+} */
+
+/* .contact-info-items .value {
+	background-color: rgba( 255, 255, 255, 1 );
+	color: rgba( 80, 80, 0, 1 );
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+/* #contact-info figure {
+	background: center / cover no-repeat;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #contact-info .title, #contact-info .description, #contact-info .info, */ #contact-info .contact-info-items, #contact-info .controls {
+		padding-right: calc( 40 / 100 * 100% ); padding-right: calc( 40 / 100 * ( 100% - 2 * 1.25rem ) );
+	}
+	
+	/* #contact-info .controls {
+		padding-right: calc( 40 / 100 * ( 100% - 2 * 1.25rem ) );
+	} */
+	
+	#contact-info .controls {
+		right: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 800px ) {
+	
+	#contact-info .controls {
+		box-sizing: content-box;
+		display: inline-block;
+	//	height: auto;
+		margin-left: 1.25rem; margin-bottom: 1.25rem;
+		position: relative; right: auto;
+	//	background-color: red;
+	}
+	
+	#contact-info .random-access {
+		position: initial; transform: none;
+	}
+	
+	/* #contact-info .title, #contact-info .description, */ /* #contact-info .info, */ #contact-info .contact-info-items, #contact-info .controls {
+		padding-right: 0;
+	}
+	
+	#contact-info .title {
+	//	margin-top: 2.5rem;
+	//	background-color: blue;
+	}
+	
+}
+
+@media screen and ( max-width: 480px ) {
+	
+	.contact-info-items .value {
+		float: none;
+		display: inline-block;
+	}
+	
+	.contact-info-items .value:not( :last-of-type ) {
+		margin-right: 0.2em;
+	}
+
+	.contact-info-items .label:nth-of-type( n + 2 ) {
+		top: 0; margin-bottom: 0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Random access nav is horizontally aligned
+ * and centered horizontally and vertically within the controls section
+ */
+
+#contact-info .random-access li {
+	float: left;
+}
+
+#contact-info .random-access button {
+	width: 40px; height: 40px;
+}
+
+#contact-info .random-access li:not( :last-child ) button {
+	margin-right: 10px;
+}
+
+#contact-info .random-access button:before {
+	display: flex; align-items: center; justify-content: center;
+}
+
+#contact-info .random-access button:after {
+	box-sizing: border-box;
+	border: 1px solid;
+}
+
+/* Clearing floats */
+#contact-info .random-access:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+/**
+ * Inserting Font-Awesome icons
+ */
+#contact-info .random-access button:before {
+	font-family: "Font Awesome";
+	font-size: 1.25rem;
+}
+
+#contact-info .random-access li:nth-child( 1 ) button:before {
+	content: "\f041";
+}
+
+#contact-info .random-access li:nth-child( 2 ) button:before {
+	content: "\f095";
+}
+
+#contact-info .random-access li:nth-child( 3 ) button:before {
+	font-size: 1.1rem;
+	content: "\f0e0";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#contact-info .random-access button {
+//	background-color: transparent;
+//	color: rgba( 255, 255, 255, 1 );
+	color: inherit;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#send-email {
+//	display: none;
+	box-sizing: border-box;
+	max-width: 28.0rem;
+//	margin-top: -5rem;
+	padding-left: 1.25rem; padding-right: 1.25rem;
+	position: relative; z-index: 2;
+}
+
+#send-email form {
+	padding: 2.8em;
+	position: relative; z-index: 1;
+}
+
+#send-email form:before, #send-email form:after {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+}
+
+#send-email form:before {
+	box-sizing: border-box;
+	z-index: 2;
+}
+
+#send-email form:after {
+	z-index: 1;
+}
+
+#send-email dl {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#send-email dt {
+	position: absolute;
+//	padding: 4px 8px;
+}
+
+#send-email label, #send-email input, #send-email textarea {
+	position: relative; z-index: 3;
+}
+
+#send-email label, #send-email input, #send-email textarea {
+	padding: 20px 15px;
+}
+
+#send-email textarea {
+//	padding: 8px;
+}
+
+/* #send-email label {
+	margin: 4px 8px;
+} */
+
+#send-email input, #send-email textarea {
+	box-sizing: border-box;
+	display: block;
+	width: 100%; // height: 4.0em;
+//	padding: 0;
+}
+
+
+
+#send-email form:before, #send-email input, #send-email textarea {
+	border-style: solid; border-width: 1px;
+}
+
+#send-email textarea {
+	display: block;
+	height: 10.0em;
+}
+
+#send-email input[ type= "submit" ] {
+	height: 4.0em;
+	padding: 0;
+}
+
+#send-email .send label {
+	display: none;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#send-email form:before, #send-email form:after {
+	content: "";
+}
+
+#send-email label, #send-email input, #send-email textarea {
+	font-family: Arial;
+	font-size: 0.85rem;
+//	font-variant: small-caps;
+//	text-transform: lowercase;
+}
+
+#send-email input[ type= "submit" ] {
+	color: rgba( 255, 255, 255, 0.75 );
+	font-family: "Arial Black";
+	text-transform: uppercase;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#send-email form {
+	background-color: rgba( 255, 255, 255, 1 );
+}
+
+#send-email form:after {
+	background-color: rgba( 80, 80, 0, 0.75 );
+}
+
+#send-email label, #send-email input, #send-email textarea {
+	color: rgba( 255, 255, 255, 0.75 );
+}
+
+#send-email label {
+	color: rgba( 255, 255, 255, 0.4 );
+}
+
+#send-email input, #send-email textarea {
+	background-color: transparent;
+}
+
+#send-email input, #send-email textarea {
+	border-color: rgba( 255, 255, 255, 0.15 );
+}
+
+#send-email form:before {
+	border-color: rgba( 255, 255, 255, 0.25 );
+}
+
+#send-email input[ type= "submit" ] {
+	background-color: rgba( 255, 255, 255, 0.05 );
+	color: rgba( 255, 255, 255, 0.75 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+#send-email input:focus, #send-email textarea:focus {
+	outline: none;
+}
+
+#send-email input:not( [type= "submit"] ):focus, #send-email textarea:focus {
+	border-color: rgba( 255, 255, 255, 0.5 );
+}
+
+#send-email dt {
+	overflow: hidden;
+}
+
+/* #send-email dl label {
+	display: block;
+	margin-top: 0;
+	transition: margin-top 0.25s;
+}
+
+#send-email .focused label {
+	margin-top: -20px;
+} */
+
+#send-email dl label {
+	display: block;
+	transition: transform 0.25s;
+}
+
+#send-email .focused label {
+	transform: translateY( -120% );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+#send-email form {
+	box-shadow: 0 0 20px rgba( 0, 0, 0, 0.7 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 28.0rem ) {
+	
+	#send-email form {
+		padding: 8%;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+footer {
+	padding-bottom: 100px;
+	position: relative;
+}
+
+footer h2, .copyright-data {
+	width: 100%; height: 50px; line-height: 50px;
+	position: absolute;
+}
+
+footer h2 {
+	bottom: 50px;
+}
+
+.copyright-data {
+	bottom: 0;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+footer {
+	font-family: "Arial Black";
+	text-transform: uppercase;
+	line-height: 1.0;
+}
+
+footer h2, .copyright-data {
+	font-size: 70%;
+	text-align: center;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+footer {
+	color: rgba( 80, 80, 0, 0.75 );
+}
+
+footer p {
+	color: rgba( 255, 255, 255, 0.7 );
+	background-color: rgba( 80, 80, 0, 0.75 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#social-net-links .nav {
+	width: 40px;
+}
+
+#social-net-links .nav a {
+	display: block;
+	margin-bottom: 6px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+ 
+.button {
+	display: inline-block;
+	position: relative; z-index: 2;
+	border: 1px solid; border-radius: calc( 40px / 2 );
+	overflow: hidden;
+}
+
+/**
+ * All buttons, except buttons for opening specific service info, have height 40px,
+ * line-height is equal to the height to center text content vertically
+ */
+.button {
+	height: 40px; line-height: calc( 40px );
+}
+
+.button.open {
+	padding-left: 20px; padding-right: 20px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.button {
+	font-weight: bold;
+}
+
+/**
+ * All buttons have :after pseudo-element to animate the hover state
+ */
+
+.button:after {
+	content: "";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/**
+ * All buttons have :after pseudo-element to animate the hover state
+ */
+
+.button:after {
+	display: block;
+	width: 120%; padding-top: 120%;
+	position: absolute; left: 50%; top: 50%; margin-left: -60%; margin-top: -60%;
+	z-index: -1;
+	border-radius: 60%;
+//	border-color: rgba( 80, 80, 0, 1 );
+	background-color: rgba( 80, 80, 0, 1 );
+	transform: scale( 0 );
+	transition-property: transform; transition-duration: 0.25s;
+}
+
+
+/**
+ * Hover state changes in button style
+ */
+ 
+.button:hover:after {
+	transform: scale( 1 );
+}
+
+.button:hover {
+	border-color: rgba( 80, 80, 0, 1 );
+	color: rgba( 255, 255, 255, 1 );
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.25 );
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.25 );
+}
+
+
+/*
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+.button.close, 
+#main-nav .button.open, 
+.button.scroll-to-top {
+	width: 40px;
+}
+
+/**
+ * Close buttons have :before pseudo-element to hold the "x"-icon
+ */
+.button:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 2;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.button.close, 
+#main-nav .button.open, 
+.button.scroll-to-top, 
+#social-net-links .button {
+	text-indent: -10000px;
+}
+
+/**
+ * Close buttons have :before pseudo-element to hold the "x"-icon
+ */
+ 
+.button:before {
+	text-indent: 0;
+	text-align: center;
+}
+
+/**
+ * Close buttons, navigation open button and scroll to top button icons are Font Awesome characters
+ */
+.button:before {
+	font-family: "Font Awesome";
+}
+
+/* Close button icon */
+.button.close:before {
+	content: "\f00d";
+}
+
+/* Scroll-to-top button icon */
+.button.scroll-to-top:before {
+	content: "\f062";
+}
+
+/* Toggle nav button icon */
+#main-nav .button.open:before {
+	content: "\f0c9";
+}
+
+/* Social net links buttons icons */
+#social-net-links .button:before {
+	font-family: "Font Awesome Brands";
+}
+
+#social-net-links .facebook .button:before {
+	content: "\f39e";
+}
+
+#social-net-links .twitter .button:before {
+	content: "\f099";
+}
+
+#social-net-links .you-tube .button:before {
+	content: "\f167";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/*
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Random-access navigation styling
+ */
+.random-access li {
+	float: left;
+}
+
+/* Clearing floats */
+.random-access:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/**
+ * Resetting of predefined styles for slider automatically generated buttons
+ */
+.random-access button {
+	box-sizing: content-box;
+	display: block;
+	padding: 0;
+	border: 0;
+	position: relative;
+	background-color: transparent;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+
+/**
+ * Removes the outline, assigned to the random access button on click
+ */
+.random-access button:focus {
+	outline: none;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/**
+ * Creating two pseudo-elements:
+ * the "before" has the role to represent the button itself, 
+ * the "after" is used as an animated (on user interaction) border around the button
+ */
+.random-access button:before, .random-access button:after {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	border-radius: 50%;
+	content: "";
+	text-indent: 0;
+}
+
+/**
+ * Defining a transition over random access buttons on hover
+ */
+.random-access li button:after {
+	transition: transform 0.2s;
+}
+
+/**
+ * Setting button border initial state: scaled down and not visible
+ */
+.random-access button:after, .random-access:hover li button:after {
+	transform: scale( 0.45 );
+	opacity: 0;
+}
+
+/**
+ * Setting button border hover state: fully visible and scaled up. Buttons are reset to normal size (100%) on hover
+ */
+.random-access .current button:after, .random-access:hover li:hover button:after {
+	opacity: 1;
+	transform: scale( 1 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #logo, #quick-contact,
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open,
+	#services header h3, #services header p, #services header .button.open,
+	#contact-info h3, #contact-info p, #contact-info .info {
+		margin-left: 1.25rem; margin-right: 20%;
+	} */
+	
+	header .logo, #quick-contact,
+	.title, .sup-title, .description, .button.open,
+	#slider .sup-title, #slider .title, #slider .description, #slider .button.open,
+	.button.close,
+	/* .header .title, .header .description, .header .button.open, */
+	#contact-info .info {
+		margin-left: 1.25rem; margin-right: 20%;
+	}
+	
+	
+	
+	/* #quick-contact,
+	#about header h2, #about header p, #about header .button.open,
+	#services header h3, #services header p, #services header .button.open,
+	#contact-info h3, #contact-info p, #contact-info .info {
+		margin-right: 1.25rem;
+	} */
+	
+	#quick-contact,
+	.title, .sup-title, .description,
+	#contact-info .info {
+		margin-right: 1.25rem;
+	}
+	
+	#about .content .title,
+	.content .button.open {
+		margin-left: 0; margin-right: 0;
+	}
+	
+}
+
+@media screen and ( max-width: 960px ) {
+	
+	.header .title, .header .description, .header .button.open {
+		margin-left: 1.25rem; margin-right: 10%;
+	}
+	
+}
+
+@media screen and ( max-width: 840px ) {
+	
+	/* #logo, 
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open {
+		margin-right: 10%;
+	} */
+	
+	header .logo, 
+	.title, .sup-title, .description, header .button.open/* ,
+	#about header h2, #about header p, #about header .button.open */ {
+		margin-right: 10%;
+	}
+	
+}
+
+@media screen and ( max-width: 640px ) {
+	
+	header .logo, #quick-contact,
+	.title, .sup-title, .description, .button.open,
+	#slider .sup-title, #slider .title, #slider .description, #slider .button.open
+	/* #slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open */ {
+		margin-right: 1.25rem;
+	}
+	
+	body {
+		line-height: 1.4;
+	}
+
+	/* Gives heading, paragraph and button smaller font size */	
+	.title, #slider .title
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */ {
+	//	font-size: 1.6rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.45rem;
+	}
+
+	/* Decreases heading, paragraph and button vertical distance */
+	#slider h3, #slider p,
+	#about header h2, #about header p,
+	#contact-info h3, #contact-info p {
+		margin-bottom: 2rem;
+	}
+	
+	body > header {
+		margin-top: 20px;
+	}
+	
+	#slider .content li {
+		padding-top: calc( 20px + 50px + 6.8rem ); padding-bottom: 3.4rem;
+	}
+	
+	
+}
+
+@media screen and ( max-width: 520px ) {
+	
+	/* Decreases heading, paragraph and button vertical distance */
+	#slider h3, #slider p,
+	#about header h2, #about header p,
+	.service-group header h3, .service-group header p,
+	#contact-info h3, #contact-info p {
+		margin-bottom: 1.6rem;
+	}
+	
+	.title
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */ {
+		font-size: 1.4rem;
+	}
+	
+	#slider .title {
+		font-size: 1.5rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 440px ) {
+	
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */
+	.title {
+		font-size: 1.25rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.1rem;
+	}
+	
+	/* Quick contact is positioned at the center */
+	#quick-contact .entry.email {
+		display: none;
+	}
+	
+}
+
+@media screen and ( max-width: 320px ) {
+	
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */
+	.title {
+		font-size: 1.2rem;
+	}
+	
+	#slider h4 {
+		font-size: 0.85rem;
+	}
+	
+}
+
+/**
+ * About and services specific
+ */
+
+/* @media screen and ( max-width: 1000px ) {
+	
+	#about header h2, #about header p, #about header .button.open, #about main > .button.close,
+	#services header h3, #services header p, #services header .button.open {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#about article {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#about main > .button.close {
+		left: 0;
+	}
+	
+	#services main h3, #services main > p {
+		margin-right: 1.25rem;
+	}
+
+}
+
+@media screen and ( max-width: 640px ) {
+	
+	#about article {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#services .content li:nth-child( n ) {
+		float: none;
+		width: auto;
+		margin-left: -1.25rem; margin-right: -1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 520px ) {
+	
+	#slider h3,
+	#about header h2,  #about main h3,
+	#services .service-group header h3, #services .service-group main h3,
+	#contact-info h3 {
+		font-size: 1.4rem;
+	}
+	
+}
+
+@media screen and ( max-width: 420px ) {
+	
+	#slider h3,
+	#about header h2, #about main h3,
+	#services .service-group header h3, #services .service-group main h3,
+	#contact-info h3 {
+		font-size: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 320px ) {
+	
+	#slider h3,
+	#about header h2,  #about main h3,
+	#services .service-group header h3, #services .service-group main h4,
+	#contact-info h3 {
+	//	font-size: 1.2rem;
+	}
+	
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
